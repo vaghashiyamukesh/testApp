@@ -1,0 +1,13 @@
+<h1>Edit Post</h1>
+<%= form_for @posts do |f| %>
+  <p>  <%= f.label :title %></p><br>
+    <P><%= f.text_field :title %></P><br>
+
+    <p>  <%= f.label :body %></p><br>
+    <P><%= f.text_area :body %></P><br>
+
+    <p>  <%= f.label "category" %><p><br>
+    <p><%= f.select :category_id, Categories.all.collect { |x| [x.name,x.id] },{:include_blank => "select one"} %></p>
+
+    <p><%= f.submit "update post" %></p>
+<%end %>

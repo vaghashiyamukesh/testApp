@@ -1,0 +1,6 @@
+<h1>Posts show</h1>
+<p><%= @posts.title %></p>
+<p><%= @posts.created_at %></p>
+<p><%= @posts.body %></p>
+<%= link_to "Edit", edit_post_path %> | <%= link_to "Delete", @post, :confirm => "are you sure you want to delete?",:method => :delete  %>
+
